@@ -3,6 +3,7 @@ import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
+import pluginQuery from '@tanstack/eslint-plugin-query';
 
 export default tseslint.config(
   { ignores: ['dist'] },
@@ -52,5 +53,6 @@ export default tseslint.config(
       'no-param-reassign': 'error', // 파라미터에 직접 데이터 재할당 시, 에러
       'no-unused-expressions': 'error',
     },
-  }
+  },
+  ...pluginQuery.configs['flat/recommended']
 );

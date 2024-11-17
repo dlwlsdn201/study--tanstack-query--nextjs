@@ -1,11 +1,8 @@
-import type { NextConfig } from 'next';
-
-const nextConfig: NextConfig = {
+/* import type { NextConfig } from 'next'; */
+module.exports = {
   env: {},
 
   webpack: (config) => {
     return config;
   },
 };
-
-export default nextConfig;
