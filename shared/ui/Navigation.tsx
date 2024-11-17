@@ -11,7 +11,7 @@ export const Navigation = ({}): React.ReactElement => {
     targetPath === currentPath ? '⇦' : '';
 
   const navigationItems = NavigationList.map((item) => (
-    <li style={{ display: 'flex', gap: '0.5rem' }}>
+    <li style={{ display: 'flex', gap: '0.5rem' }} key={item.path}>
       <Link href={item.path}>{item.label}</Link>
       {currentArrow(item.path)}
     </li>
